@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace BlobLibrary
 {
-    public class Core
+    public class CCore
     {
         /// <summary>
         /// This is an example of an exported variable
         /// </summary>
-        public int nCore { get; set; } = 0;
+        public static int nCore { get; set; } = 0;
 
         /// <summary>
         /// This is an example of an exported function.
         /// </summary>
         /// <returns></returns>
-        public int fnCore()
+        public static int fnCore()
         {
             return 0;
         }
@@ -25,7 +25,7 @@ namespace BlobLibrary
         /// <summary>
         /// This is the constructor of a class that has been exported.
         /// </summary>
-        public Core()
+        public CCore()
         {
 
         }

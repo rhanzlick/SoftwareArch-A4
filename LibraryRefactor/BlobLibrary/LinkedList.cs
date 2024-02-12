@@ -7,57 +7,27 @@ using System.IO;
 
 namespace BlobLibrary
 {
-    public class LinkedList : ILinkedList
+    public abstract class ILinkedList
     {
         protected int m_count { get; set; } = 0;
-
-        public bool add(int val)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void clear()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool isEmpty()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool remote(int val)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string toString()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// This class is exported from the LinkedList
-        /// </summary>
-
-
-
-    }
-
-    public interface ILinkedList
-    {
-        /// <summary>
-        /// returns true if list is empty, otherwise true.
-        /// </summary>
-        /// <returns></returns>
-        abstract bool isEmpty();
 
         /// <summary>
         /// Adds a value to the LinkedList. Return True if able to, otherwise false.
         /// </summary>
         /// <param name="val"></param>
         /// <returns></returns>
-        abstract bool add(int val);
+        public abstract bool add(int val);
+
+        /// <summary>
+        /// Remove all elements from LinkedList
+        /// </summary>
+        public abstract void clear();
+
+        /// <summary>
+        /// returns true if list is empty, otherwise true.
+        /// </summary>
+        /// <returns></returns>
+        public abstract bool isEmpty();
 
         /// <summary>
         /// Remove a value to the LinkedList. Return true if able to, otherwise false.
@@ -65,15 +35,9 @@ namespace BlobLibrary
         /// </summary>
         /// <param name="val"></param>
         /// <returns></returns>
-        abstract bool remote(int val);
+        public abstract bool remove(int val);
 
-        /// <summary>
-        /// Remove all elements from LinkedList
-        /// </summary>
-        abstract void clear();
-
-
-        abstract string toString();
+        public abstract string toString();
 
     }
 
@@ -121,40 +85,88 @@ namespace BlobLibrary
 
         public void Dispose()
         {
-            Console.WriteLine($"Deleting node with value {m_value}");
+            Console.WriteLine($"Deleting node with value {m_value}\n");
             //TODO - hint, you can recursively handle this
         }
     }
 
-    public class ArrayBasedLinkedList : LinkedList, IDisposable
+    public class PointerBasedLinkedList : ILinkedList, IDisposable
     {
-        public int[] m_values { get; set; } = new int[10];
+        private Node m_head { get; set; }
 
-        public bool add(int val)
+        public PointerBasedLinkedList() { }
+
+        public override bool isEmpty()
+        {
+            return false;
+            //TODO
+        }
+
+        public override bool add(int val)
+        {
+            return false;
+            //TODO
+        }
+
+        public override void clear()
+        {
+            m_head = null;
+        }
+
+        
+
+        public override bool remove(int val)
         {
             //TODO
             return false;
         }
 
-        public void clear()
+        public override string toString()
         {
-            BusinessIntelligence.GetBusinessIntelligence().LogSomething("Something");
-            //TODO
+            string str = "";
+            return str;
         }
 
-        public bool isEmpty()
+        public void Dispose()
+        {
+            return;
+        }
+    }
+
+    public class ArrayBasedLinkedList : ILinkedList, IDisposable
+    {
+        public int[] m_values { get; set; } = new int[10];
+
+        public ArrayBasedLinkedList()
+        {
+            
+        }
+
+        public override bool isEmpty()
         {
             return true;
             //TODO
         }
 
-        public bool remote(int val)
+        public override bool add(int val)
         {
             //TODO
             return false;
         }
 
-        public string toString()
+        public override bool remove(int val)
+        {
+            //TODO
+            return false;
+        }
+
+        public override void clear()
+        {
+            BusinessIntelligence.GetBusinessIntelligence().LogSomething("Something");
+            //TODO
+        }
+
+        public override string toString()
         {
             string str = "";
 
@@ -169,42 +181,5 @@ namespace BlobLibrary
         }
     }
 
-    public class PointerBasedLinkedList : LinkedList, IDisposable
-    {
-        private Node m_head { get; set; }
-
-        public bool add(int val)
-        {
-            return false;
-            //TODO
-        }
-
-        public void clear()
-        {
-            m_head = null;
-        }
-
-        public bool isEmpty()
-        {
-            return false;
-            //TODO
-        }
-
-        public bool remote(int val)
-        {
-            //TODO
-            return false;
-        }
-
-        public string toString()
-        {
-            string str = "";
-            return str;
-        }
-
-        public void Dispose()
-        {
-            return;
-        }
-    }
+    
 }

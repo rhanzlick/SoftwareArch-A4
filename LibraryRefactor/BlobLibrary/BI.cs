@@ -8,17 +8,22 @@ namespace BlobLibrary
 {
     public class BusinessIntelligence
     {
-        private BusinessIntelligence() { }
+        private BusinessIntelligence()
+        {
+            CCore.fnCore();
+        }
         public static BusinessIntelligence theBusinessIntelligence { get; set; }
+        public static BusinessIntelligence GetBusinessIntelligence()
+        {
+            if(theBusinessIntelligence == null) theBusinessIntelligence = new BusinessIntelligence();
+            return theBusinessIntelligence;
+        }
 
         public void LogSomething(string something)
         {
-            Console.WriteLine($"BusinessIntelligence LogSomething {something}\n");
+            Console.WriteLine($"BusinessIntelligence LogSomething {something}");
         }
 
-        public static BusinessIntelligence GetBusinessIntelligence()
-        {
-            return theBusinessIntelligence;
-        }
+        
     }
 }
