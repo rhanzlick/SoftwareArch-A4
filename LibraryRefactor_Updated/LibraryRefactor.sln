@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryRefactor", "LibraryRefactor\LibraryRefactor.csproj", "{5459D166-8C99-476D-90CC-8DC4D2D1A94E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryRefactor", "LibraryRefactor\LibraryRefactor.csproj", "{5459D166-8C99-476D-90CC-8DC4D2D1A94E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobLibrary", "BlobLibrary\BlobLibrary.csproj", "{20737DC2-55AE-4FAF-93E9-46888BE27ED9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{BD039884-FE28-4EF6-B001-A92E78531E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{E4BED0DE-B906-4F3C-8150-AC2F0F9C2B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E77E7D0B-1F44-4A3F-9E58-588648362009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryRefactorTesting", "UnitTesting\LibraryRefactorTesting.csproj", "{3C621369-28FA-41EF-B389-3A9936595913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +23,22 @@ Global
 		{5459D166-8C99-476D-90CC-8DC4D2D1A94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5459D166-8C99-476D-90CC-8DC4D2D1A94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5459D166-8C99-476D-90CC-8DC4D2D1A94E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20737DC2-55AE-4FAF-93E9-46888BE27ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20737DC2-55AE-4FAF-93E9-46888BE27ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20737DC2-55AE-4FAF-93E9-46888BE27ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20737DC2-55AE-4FAF-93E9-46888BE27ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD039884-FE28-4EF6-B001-A92E78531E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD039884-FE28-4EF6-B001-A92E78531E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD039884-FE28-4EF6-B001-A92E78531E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD039884-FE28-4EF6-B001-A92E78531E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BED0DE-B906-4F3C-8150-AC2F0F9C2B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BED0DE-B906-4F3C-8150-AC2F0F9C2B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BED0DE-B906-4F3C-8150-AC2F0F9C2B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BED0DE-B906-4F3C-8150-AC2F0F9C2B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77E7D0B-1F44-4A3F-9E58-588648362009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77E7D0B-1F44-4A3F-9E58-588648362009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77E7D0B-1F44-4A3F-9E58-588648362009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77E7D0B-1F44-4A3F-9E58-588648362009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C621369-28FA-41EF-B389-3A9936595913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C621369-28FA-41EF-B389-3A9936595913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C621369-28FA-41EF-B389-3A9936595913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C621369-28FA-41EF-B389-3A9936595913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
